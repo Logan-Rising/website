@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
-import { GiCandleFlame } from "react-icons/gi";
 
 const Header = () => {
     const [bar, setBar] = useState(false);
@@ -9,8 +8,9 @@ const Header = () => {
         <h1 style={{color: 'white'}}>Logan Rising</h1>
         <Nav bar={bar}>
             <span style={{}}><a href="#home">Home</a></span>
-            <span><a href="#service">Resume</a></span>
-            <span><a href="#project">Projects</a></span>
+            <span><a href="#experience">Experience</a></span>
+            <span><a href="#education">Education</a></span>
+            <span><a href="#projects">Projects</a></span>
         </Nav>
         <div
         onClick={() => setBar(!bar)}

@@ -2,45 +2,45 @@ import React from "react";
 import styled from "styled-components";
 import Card from "../Card/Card";
 import { Slide } from "react-awesome-reveal";
-import githubLogo from "../../assets/github.png";
-import linkedinLogo from "../../assets/LI-In-Bug.png";
 
-const Links = () => {
+import lccc from "../../assets/lccc.png";
+import rockets from "../../assets/rockets.png";
+
+const Experience = () => {
   return (
-    <Container id="links">
+    <Container id="education">
       <Slide direction="down">
         <h1 style={{textDecorationLine: 'underline', color: 'white'}}>
-          Find Me On
+          Education
         </h1>
       </Slide>
       <Cards>
         <Slide direction="left">
-        <Card
-          image={githubLogo}
-          title="Github"
-          description="Find me on Github"
-          buttonText={"Github"}
-          link="https://github.com/Logan-Rising"
-          background='white'
-          imageWidth='42%'
-        />
+          <Card
+            image={rockets}
+            imageWidth="47%"
+            title="Bachelor Of Computer Science And Engineering "
+            company="The University Of Toledo"
+            date="August 2018 - August 2023"
+            background="#005F9F"
+          />
         </Slide>
         <Slide direction="right">
-        <Card
-          image={linkedinLogo}
-          title="LinkedIn"
-          description="Find me on LinkedIn"
-          buttonText={"LinkedIn"}
-          link="https://www.linkedin.com/in/logan-rising-481759190/"
-          background='white'
-        />
+          <Card
+            image={lccc}
+            imageWidth="30%"
+            title="Associate Of Science"
+            company="Lorain County Community College"
+            date="August 2017 - August 2023"
+            background="#005F9F"
+          />
         </Slide>
       </Cards>
     </Container>
   );
 };
 
-export default Links;
+export default Experience;
 
 const Container = styled.div`
   width: 80%;

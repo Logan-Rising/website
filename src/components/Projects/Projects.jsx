@@ -2,45 +2,35 @@ import React from "react";
 import styled from "styled-components";
 import Card from "../Card/Card";
 import { Slide } from "react-awesome-reveal";
-import githubLogo from "../../assets/github.png";
-import linkedinLogo from "../../assets/LI-In-Bug.png";
 
-const Links = () => {
+import lccc from "../../assets/lccc.png";
+import rockets from "../../assets/rockets.png";
+
+const Projects = () => {
   return (
-    <Container id="links">
+    <Container id="projects">
       <Slide direction="down">
         <h1 style={{textDecorationLine: 'underline', color: 'white'}}>
-          Find Me On
+          Projects
         </h1>
       </Slide>
       <Cards>
         <Slide direction="left">
-        <Card
-          image={githubLogo}
-          title="Github"
-          description="Find me on Github"
-          buttonText={"Github"}
-          link="https://github.com/Logan-Rising"
-          background='white'
-          imageWidth='42%'
-        />
+          <Card
+            
+          />
         </Slide>
         <Slide direction="right">
-        <Card
-          image={linkedinLogo}
-          title="LinkedIn"
-          description="Find me on LinkedIn"
-          buttonText={"LinkedIn"}
-          link="https://www.linkedin.com/in/logan-rising-481759190/"
-          background='white'
-        />
+          <Card
+            
+          />
         </Slide>
       </Cards>
     </Container>
   );
 };
 
-export default Links;
+export default Projects;
 
 const Container = styled.div`
   width: 80%;
