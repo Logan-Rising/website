@@ -7,20 +7,16 @@ import { RepoData } from "../../constants/GithubData.tsx";
 
 const Projects = () => {
 const [githubUser, setGithubUser] = useState("Logan-Rising")
-const [githubData, setGithubData] = useState();
+const [githubDiscordBotData, setGithubDiscordBotData] = useState(undefined);
 
 useEffect(() => {
   fetchData()
 }, [])
 
-useEffect(() => {
-  console.log(githubData)
-}, [githubData])
-
-const fetchData = async () => {
+async function getRepoData(githubRepoUrl, languagesUrl) {
   let repos = [];
     let res;
-  res = await fetch(`https://api.github.com/repos/Logan-Rising/DiscordBot`)
+  res = await fetch(githubRepoUrl)
   console.log('logging res')
   console.log(res)
 
@@ -45,9 +41,19 @@ const fetchData = async () => {
       url,
     }
 
-    const infoArray = [info];
+    setGithubDiscordBotData(info);
 
-    setGithubData(infoArray);
+    res = await fetch(languagesUrl);
+
+    data = await res.json();
+    repos = repos.concat(data);
+
+    console.log('logging repos v2')
+    console.log(repos)
+}
+
+const fetchData = async () => {
+  getRepoData(`https://api.github.com/repos/Logan-Rising/DiscordBot`, `https://api.github.com/repos/Logan-Rising/DiscordBot/languages`);
 }
 
   return (
@@ -69,11 +75,11 @@ const fetchData = async () => {
       }}>
         <Slide direction="left">
           <Card
-            title={githubData ? githubData[0].name : ''}
-            company={githubData ? githubData[0].description : ''}
-            date={githubData ? githubData[0].language : ''}
+            title={githubDiscordBotData ? githubDiscordBotData.name : ''}
+            company={githubDiscordBotData ? githubDiscordBotData.description : ''}
+            date={githubDiscordBotData ? githubDiscordBotData.language : ''}
             buttonText="View Project"
-            link={githubData ? githubData[0].url : ''}
+            link={githubDiscordBotData ? githubDiscordBotData.url : ''}
           />
         </Slide>
         <Slide direction="right">
