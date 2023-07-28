@@ -1,8 +1,9 @@
 import React from 'react'
 import flipImg from "../../assets/flip.png";
+import Row from 'react-bootstrap/Row';
 
 const Card = (props) => {
-    const {description, title, company, date, image, buttonText, link, flip, background, width, imageWidth } = props;
+    const {description, title, company, date, image, buttonText, link, flip, background, width, imageWidth, subImage  } = props;
     const [frontCard, setFrontCard] = React.useState(true);
 
     const openInNewTab = (url) => {
@@ -26,7 +27,12 @@ const Card = (props) => {
             )}
             {frontCard && (<h1>{title}</h1>) }
             {frontCard && (<h2>{company}</h2>) }
-            {frontCard && (<h3 style={{whiteSpace: 'pre-line'}}>{date}</h3>)}
+            {frontCard && (
+            <div style={{display:'inline-block'}}>
+            {subImage && (<img src={subImage} style={{width: '5%'}} />)}
+            <h3 style={{whiteSpace: 'pre-line'}}>{date}</h3>
+            </div>
+            )}
             {frontCard && buttonText && link && (
                 <button
                 role="link"
