@@ -1,0 +1,24 @@
+.card-container {
+    margin: 40px auto;
+    max-width: 1280px;
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    font-size: 30px;
+    margin-right: 10px;
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  

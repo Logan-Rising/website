@@ -33,6 +33,12 @@ const Experience = () => {
             company="The University Of Toledo"
             date="August 2018 - August 2023"
             background="#005F9F"
+            flip={true}
+            description={
+              `Related Coursework:
+              
+              `
+            }
           />
         </Slide>
         <Slide direction="right">

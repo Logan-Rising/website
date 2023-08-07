@@ -4,60 +4,40 @@ import Card from "../Card/Card";
 import { Slide } from "react-awesome-reveal";
 import githubLogo from "../../assets/github.png";
 import linkedinLogo from "../../assets/LI-In-Bug.png";
+import "../Card/CardContainer.css";
 
 const Links = () => {
   return (
-    <Container id="links">
-      <Slide direction="down">
-        <h1 style={{textDecorationLine: 'underline', color: 'white'}}>
-          Find Me On
-        </h1>
-      </Slide>
-      <Cards>
+      <div className="card-container" id="links">
+        <div className="section-header">
+        <h1 className="section-title">Find Me On</h1>
+      </div>
+      <div className="cards">
         <Slide direction="left">
         <Card
-          image={githubLogo}
+          imageUrl={githubLogo}
           title="Github"
-          description="Find me on Github"
           buttonText={"Github"}
-          link="https://github.com/Logan-Rising"
-          background='white'
-          imageWidth='42%'
+          backgroundColor='white'
+          onClick={() => {
+            window.open("https://github.com/Logan-Rising", "_blank", "noreferrer");
+          }}
         />
         </Slide>
         <Slide direction="right">
         <Card
-          image={linkedinLogo}
+          imageUrl={linkedinLogo}
           title="LinkedIn"
-          description="Find me on LinkedIn"
           buttonText={"LinkedIn"}
-          link="https://www.linkedin.com/in/logan-rising-481759190/"
-          background='white'
+          backgroundColor='white'
+          onClick={() => {
+            window.open("https://www.linkedin.com/in/logan-rising-481759190/", "_blank", "noreferrer");
+          }}
         />
         </Slide>
-      </Cards>
-    </Container>
+        </div>
+      </div>
   );
 };
 
 export default Links;
-
-const Container = styled.div`
-  width: 80%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 3rem 0;
-  @media (max-width: 840px) {
-    width: 90%;
-  }
-
-  h1 {
-    padding-top: 1rem;
-  }
-`;
-const Cards = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin-top: 4rem;
-  gap: 1rem;
-`;

@@ -7,16 +7,11 @@ const Header = () => {
     <Container bar={bar}>
         <h1 style={{color: 'white'}}>Logan Rising</h1>
         <Nav bar={bar}>
-            <span style={{}}><a href="#home">Home</a></span>
+            <span><a href="#home">Home</a></span>
             <span><a href="#experience">Experience</a></span>
             <span><a href="#education">Education</a></span>
             <span><a href="#projects">Projects</a></span>
         </Nav>
-        <div
-        onClick={() => setBar(!bar)}
-        className="bars">
-            <div className="bar"></div>
-        </div>
     </Container>
   )
 }
@@ -75,19 +70,7 @@ const Container = styled.div`
         }
     }
 `
-const Logo = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    span{
-        font-size: 1.8rem;
-    }
 
-    h1{
-        font-weight: 600;
-        font-size: 1.2rem;
-    }
-`
 const Nav = styled.div`
     @media(max-width:640px){
         position: fixed;

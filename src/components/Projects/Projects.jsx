@@ -7,9 +7,13 @@ import {useEffect, useState} from 'react';
 import DiscordBotLogo from "../../assets/DiscordBotLogo.png";
 import JavascriptLogo from '../../assets/JavaScript-logo.png';
 import TypescriptLogo from '../../assets/typescript-logo.png';
+import DiscordBotDashboardLogo from '../../assets/DiscordBotDashbordLogo.png';
+import WebsiteLogo from '../../assets/website-logo.png';
 
 const Projects = () => {
 const [githubDiscordBotData, setGithubDiscordBotData] = useState(undefined);
+const [githubDiscordBotDashboardData, setGithubDiscordBotDashboardData] = useState(undefined);
+const [githubWebsiteData, setGithubWebsiteData] = useState(undefined);
 
 useEffect(() => {
   fetchData()
@@ -43,12 +47,13 @@ async function getRepoData(githubRepoUrl) {
       url,
     }
 
-    setGithubDiscordBotData(info);
+    return info;
 }
 
 const fetchData = async () => {
-  await getRepoData(`https://api.github.com/repos/Logan-Rising/DiscordBot`);
-  // await getRepoData(``);
+  setGithubDiscordBotData(await getRepoData(`https://api.github.com/repos/Logan-Rising/DiscordBot`));
+  setGithubDiscordBotDashboardData(await getRepoData(`https://api.github.com/repos/Logan-Rising/DiscordBotDashboard`));
+  setGithubWebsiteData(await getRepoData(`https://api.github.com/repos/Logan-Rising/website`));
 }
 
   return (
@@ -81,9 +86,32 @@ const fetchData = async () => {
             subImage={JavascriptLogo}
           />
         </Slide>
+        <Slide direction="up">
+          <Card
+            imageUrl = {DiscordBotDashboardLogo}
+            backgroundColor={'#800000'}
+            title={githubDiscordBotDashboardData ? githubDiscordBotDashboardData.name : ''}
+            description={githubDiscordBotDashboardData ? githubDiscordBotDashboardData.description : ''}
+            date={'Typescript'}
+            buttonText="View Project"
+            link={githubDiscordBotDashboardData ? githubDiscordBotDashboardData.url : ''}
+            onClick={() => {
+              window.open("https://github.com/Logan-Rising/DiscordBotDashboard", "_blank", "noreferrer");
+            }}
+            subImage={TypescriptLogo}
+          />
+        </Slide>
         <Slide direction="right">
           <Card
-            
+            image = {WebsiteLogo}
+            background={'#800000'}
+            imageWidth={'70%'}
+            title={githubWebsiteData ? githubWebsiteData.name : ''}
+            company={githubWebsiteData ? githubWebsiteData.description : ''}
+            date={'Javascript'}
+            buttonText="View Project"
+            link={githubWebsiteData ? githubWebsiteData.url : ''}
+            subImage={JavascriptLogo}
           />
         </Slide>
       </div>
