@@ -21,6 +21,7 @@ const NavigationBar = () => {
             <span><a href="#experience">Experience</a></span>
             <span><a href="#education">Education</a></span>
             <span><a href="#projects">Projects</a></span>
+            <span><a href="#skills">Skills</a></span>
       </div>
 
       <div className="navbar-mobile-toggle" onClick={handleMobileMenuToggle}>

@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Card from "../Card/Card";
+import FlippableCard from "../FlippableCard/FlippableCard";
 import { Slide } from "react-awesome-reveal";
+import "../Card/CardContainer.css";
 
 import beckettlogo from "../../assets/beckettcorp.jpg";
 import clevelandclinic from "../../assets/clevelandclinic.png";
@@ -9,30 +10,19 @@ import universityoftoledo from "../../assets/ut.png";
 
 const Experience = () => {
   return (
-    <div id="experience" style={{
-      width: '80%',
-      maxWidth: '1280px',
-      margin: '0 auto',
-      padding: '3rem 0',
-    }}>
-      <Slide direction="down">
-        <h1 style={{textDecorationLine: 'underline', color: 'white'}}>
-          Experience
-        </h1>
-      </Slide>
-      <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          marginTop: '4rem',
-          gap: '1rem',
-        }}>
+      
+    <div className="card-container" id="experience">
+      <div className="section-header">
+        <h1 className="section-title">Experience</h1>
+      </div>
+      <div className="cards">
         <Slide direction="left">
-          <Card
-            image={clevelandclinic}
+          <FlippableCard
+          imageUrl={clevelandclinic}
             title={"Unit Support Assistant / Health Unit Coordinator"}
-            company={"Cleveland Clinic"}
-            date={"June 2017 - January 2021"}
-            description={
+            subDescription1={"Cleveland Clinic"}
+            subDescription2={"June 2017 - January 2021"}
+            backText={
               `• Communicate with coworkers to complete the job efficiently and maintain a sterile environment
 
               • Track and move inventory of supplies throughout the unit and other units within the hospital
@@ -43,33 +33,30 @@ const Experience = () => {
 
               • Utilize computer programs such as Epic and Watch Child to obtain patient info to track and monitor the safety of patients throughout the units`
             }
-            flip={true}
-            background='linear-gradient(159deg, #6E45E1 0%, #89D4CF 100%)'
-            imageWidth='34%'
+            backgroundImage={'linear-gradient(159deg, #6E45E1 0%, #89D4CF 100%)'}
           />
         </Slide>
         <Slide direction="up">
-          <Card
-            image={beckettlogo}
+          <FlippableCard
+            imageUrl={beckettlogo}
             title={"Software Engineering Co-op/Intern"}
-            company={"R.W. Beckett Corp."}
-            date={"August 2022 - December 2022 \n May 2023 - August 2023"}
-            description={
+            subDescription1={"R.W. Beckett Corp."}
+            subDescription2={"August 2022 - December 2022 \n May 2023 - August 2023"}
+            backText={
               "Test\n" + 
               "Test\n" + 
               "Test"
             }
-            flip={true}
-            background='linear-gradient(159deg, #6E45E1 0%, #89D4CF 100%)'
+            backgroundImage={'linear-gradient(159deg, #6E45E1 0%, #89D4CF 100%)'}
           />
         </Slide>
         <Slide direction="right">
-          <Card
-            image={universityoftoledo}
+          <FlippableCard
+            imageUrl={universityoftoledo}
             title={"Academic Industry Immersion Seminar"}
-            company={"University Of Toledo"}
-            date={"June 2020 - August 2020"}
-            description={
+            subDescription1={"University Of Toledo"}
+            subDescription2={"June 2020 - August 2020"}
+            backText={
               `• Worked with a group of students from the University of Toledo to develop the best design for a hand sanitizer factory in response to the COVID-19 pandemic while following EPA standards
 
               • Completed online certifications via Lynda/LinkedIn to broaden technical skills such as Python for Students, Advanced Java Programming, and Learning C++
@@ -79,13 +66,11 @@ const Experience = () => {
               • Discovered personality type using the Myers-Briggs Type Indicator and analyzed the results to see how I work best in a team setting`
               
             }
-            flip={true}
-            background='linear-gradient(159deg, #6E45E1 0%, #89D4CF 100%)'
-            imageWidth='28%'
+            backgroundImage={'linear-gradient(159deg, #6E45E1 0%, #89D4CF 100%)'}
           />
         </Slide>
         </div>
-    </div>
+        </div>
   );
 };
 

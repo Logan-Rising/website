@@ -57,33 +57,25 @@ const fetchData = async () => {
 }
 
   return (
-    <div id="projects" style={{
-      width: '80%',
-      maxWidth: '1280px',
-      margin: '0 auto',
-      padding: '3rem 0'}}>
+    <div id="projects" className="card-container" >
       <Slide direction="down">
         <h1 style={{textDecorationLine: 'underline', color: 'white'}}>
           Projects
         </h1>
       </Slide>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-        marginTop: '4rem',
-        gap: '1rem',
-      }}>
+      <div className="cards">
         <Slide direction="left">
           <Card
-            image = {DiscordBotLogo}
-            background={'#800000'}
+            imageUrl={DiscordBotLogo}
+            backgroundColor={'#800000'}
             imageWidth={'60%'}
             title={githubDiscordBotData ? githubDiscordBotData.name : ''}
-            company={githubDiscordBotData ? githubDiscordBotData.description : ''}
-            date={githubDiscordBotData ? githubDiscordBotData.language : ''}
+            description={githubDiscordBotData ? githubDiscordBotData.description : ''}
+            // date={githubDiscordBotData ? githubDiscordBotData.language : ''}
             buttonText="View Project"
-            link={githubDiscordBotData ? githubDiscordBotData.url : ''}
-            subImage={JavascriptLogo}
+            onClick={() => {
+              window.open("https://github.com/Logan-Rising/DiscordBot", "_blank", "noreferrer");
+            }}
           />
         </Slide>
         <Slide direction="up">
@@ -92,26 +84,22 @@ const fetchData = async () => {
             backgroundColor={'#800000'}
             title={githubDiscordBotDashboardData ? githubDiscordBotDashboardData.name : ''}
             description={githubDiscordBotDashboardData ? githubDiscordBotDashboardData.description : ''}
-            date={'Typescript'}
             buttonText="View Project"
-            link={githubDiscordBotDashboardData ? githubDiscordBotDashboardData.url : ''}
             onClick={() => {
               window.open("https://github.com/Logan-Rising/DiscordBotDashboard", "_blank", "noreferrer");
             }}
-            subImage={TypescriptLogo}
           />
         </Slide>
         <Slide direction="right">
           <Card
-            image = {WebsiteLogo}
-            background={'#800000'}
-            imageWidth={'70%'}
+            imageUrl = {WebsiteLogo}
+            backgroundColor={'#800000'}
             title={githubWebsiteData ? githubWebsiteData.name : ''}
-            company={githubWebsiteData ? githubWebsiteData.description : ''}
-            date={'Javascript'}
+            description={githubWebsiteData ? githubWebsiteData.description : ''}
             buttonText="View Project"
-            link={githubWebsiteData ? githubWebsiteData.url : ''}
-            subImage={JavascriptLogo}
+            onClick={() => {
+              window.open("https://github.com/Logan-Rising/website", "_blank", "noreferrer");
+            }}
           />
         </Slide>
       </div>

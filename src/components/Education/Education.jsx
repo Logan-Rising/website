@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Card from "../Card/Card";
+import FlippableCard from "../FlippableCard/FlippableCard";
 import { Slide } from "react-awesome-reveal";
 
 import lccc from "../../assets/lccc.png";
@@ -19,36 +19,26 @@ const Experience = () => {
           Education
         </h1>
       </Slide>
-      <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          marginTop: '4rem',
-          gap: '1rem',
-        }}>
+      <div className="cards">
         <Slide direction="left">
-          <Card
-            image={rockets}
-            imageWidth="47%"
+          <FlippableCard
+            imageUrl={rockets}
             title="Bachelor Of Computer Science And Engineering "
-            company="The University Of Toledo"
-            date="August 2018 - August 2023"
-            background="#005F9F"
-            flip={true}
-            description={
-              `Related Coursework:
-              
-              `
+            subDescription1="The University Of Toledo"
+            subDescription2="August 2018 - August 2023"
+            backgroundImage={'linear-gradient(190deg, #FFA500 0%, #FFFF00 100%)'}
+            backText={
+              ``
             }
           />
         </Slide>
         <Slide direction="right">
-          <Card
-            image={lccc}
-            imageWidth="30%"
+          <FlippableCard
+            imageUrl={lccc}
             title="Associate Of Science"
-            company="Lorain County Community College"
-            date="August 2017 - August 2023"
-            background="#005F9F"
+            subDescription1="Lorain County Community College"
+            subDescription2="August 2017 - August 2023"
+            backgroundImage={'linear-gradient(190deg, #FFA500 0%, #FFFF00 100%)'}
           />
         </Slide>
       </div>
