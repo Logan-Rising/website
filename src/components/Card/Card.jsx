@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import './Card.css';
 
 const Card = ({ imageUrl, title, description, buttonText, backgroundColor, onClick }) => {
@@ -6,8 +7,20 @@ const Card = ({ imageUrl, title, description, buttonText, backgroundColor, onCli
     backgroundColor: backgroundColor || '#fff', // Default background color is white
   };
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
-    <div className="card" style={cardStyle}>
+    <div className={`card ${isHovered ? 'hovered' : ''}`} style={cardStyle}
+    onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}>
       <div className='image-container'>
       <img src={imageUrl} alt={title} className="card-image" />
       </div>

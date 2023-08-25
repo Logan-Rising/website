@@ -23,6 +23,10 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  .cardoverlay:hover .card-flip {
+    display: block;
+  }
   
   .card-image {
     width: 80%;
@@ -114,4 +118,17 @@
   
   .flip-card-back {
     transform: rotateY(180deg);
+    white-space: pre-line;
   }
+
+  .card:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 5px solid #007bff;
+  }
+
+  .card-flip:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 5px solid #007bff;
+  }
+
+  

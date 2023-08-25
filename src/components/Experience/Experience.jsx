@@ -10,10 +10,11 @@ import universityoftoledo from "../../assets/ut.png";
 
 const Experience = () => {
   return (
-      
     <div className="card-container" id="experience">
       <div className="section-header">
+      <Slide direction="down">
         <h1 className="section-title">Experience</h1>
+        </Slide>
       </div>
       <div className="cards">
         <Slide direction="left">
@@ -43,9 +44,20 @@ const Experience = () => {
             subDescription1={"R.W. Beckett Corp."}
             subDescription2={"August 2022 - December 2022 \n May 2023 - August 2023"}
             backText={
-              "Test\n" + 
-              "Test\n" + 
-              "Test"
+              `• Web application development using Python with Dash framework
+
+              • Mobile application development built on React Native and Typescript
+
+              • Unit testing utilizing the Jest JavaScript testing framework
+
+              • Product testing including: documentation, procedure, automation, and reliability
+
+              • OTA updating via Bluetooth connections to devices
+
+              • Agile workflow for product designing, development, and deployment
+              
+              • Gitlab project management for issues, branches, merge requests, etc.
+              `
             }
             backgroundImage={'linear-gradient(159deg, #6E45E1 0%, #89D4CF 100%)'}
           />

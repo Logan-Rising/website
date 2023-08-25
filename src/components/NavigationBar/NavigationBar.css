@@ -2,10 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #282c34;
+    background-color: #0F1632;
     color: white;
     padding: 10px;
     font-size: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 500;
   }
   
   .navbar-logo {

@@ -10,7 +10,9 @@ const Links = () => {
   return (
       <div className="card-container" id="links">
         <div className="section-header">
+        <Slide direction="down">
         <h1 className="section-title">Find Me On</h1>
+        </Slide>
       </div>
       <div className="cards">
         <Slide direction="left">

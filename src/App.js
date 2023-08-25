@@ -7,7 +7,7 @@ import Skills from "./components/Skills/Skills"
 
 function App() {
   return (
-    <div style={{background: '#282c34'}}>
+    <div style={{background: '#0F1632'}}>
       <NavigationBar/>
       <Links/>
       <Experience/>

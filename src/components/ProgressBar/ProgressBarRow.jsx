@@ -5,11 +5,13 @@ const ProgressBarsRow = ({ progress1, progress2, label1, label2 }) => {
       display: 'flex',
       justifyContent: 'space-between',
       marginBottom: '20px',
-      width: '80%',
+      width: '90%',
       maxWidth: '1280px',
       margin: '0 auto',
       padding: '3rem 0'
     };
+
+    console.log('label1 && progress1: ' + label1 && progress1)
   
     return (
       <div style={rowStyle}>
