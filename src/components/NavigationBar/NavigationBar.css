@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0F1632;
     color: white;
+    background-color: #0F1632;
     padding: 10px;
     font-size: 25px;
     position: sticky;

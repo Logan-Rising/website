@@ -1,11 +1,24 @@
 const ProgressBar = ({ progress, label }) => {
   const containerStyle = {
     width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    marginBottom: '10px',
+  };
+
+  const labelStyle = {
+    fontWeight: 'bold',
+    fontSize: '22px',
+    color: 'white',
+  };
+
+  const barContainerStyle = {
+    width: '100%',
     height: '30px',
     backgroundColor: '#ccc',
     borderRadius: '15px',
     position: 'relative',
-    marginBottom: '10px',
   };
 
   const fillerStyle = {
@@ -17,10 +30,10 @@ const ProgressBar = ({ progress, label }) => {
 
   return (
     <div style={containerStyle}>
-      <div style={fillerStyle}>
-      </div>
-      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontWeight: 'bold', fontSize: '20px' }}>
-        {label}
+      <div style={labelStyle}>{label}</div>
+      <div style={barContainerStyle}>
+        <div style={fillerStyle}>
+        </div>
       </div>
     </div>
   );

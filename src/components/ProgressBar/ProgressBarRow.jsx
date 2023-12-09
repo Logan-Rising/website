@@ -8,10 +8,8 @@ const ProgressBarsRow = ({ progress1, progress2, label1, label2 }) => {
       width: '90%',
       maxWidth: '1280px',
       margin: '0 auto',
-      padding: '3rem 0'
+      padding: 10,
     };
-
-    console.log('label1 && progress1: ' + label1 && progress1)
   
     return (
       <div style={rowStyle}>

@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import FlippableCard from "../FlippableCard/FlippableCard";
 import { Slide } from "react-awesome-reveal";
 import "../Card/CardContainer.css";
@@ -19,7 +18,7 @@ const Experience = () => {
       <div className="cards">
         <Slide direction="left">
           <FlippableCard
-          imageUrl={clevelandclinic}
+            imageUrl={clevelandclinic}
             title={"Unit Support Assistant / Health Unit Coordinator"}
             subDescription1={"Cleveland Clinic"}
             subDescription2={"June 2017 - January 2021"}
@@ -37,7 +36,7 @@ const Experience = () => {
             backgroundImage={'linear-gradient(159deg, #6E45E1 0%, #89D4CF 100%)'}
           />
         </Slide>
-        <Slide direction="up">
+        <Slide direction="right">
           <FlippableCard
             imageUrl={beckettlogo}
             title={"Software Engineering Co-op/Intern"}
@@ -62,7 +61,7 @@ const Experience = () => {
             backgroundImage={'linear-gradient(159deg, #6E45E1 0%, #89D4CF 100%)'}
           />
         </Slide>
-        <Slide direction="right">
+        <Slide direction="left">
           <FlippableCard
             imageUrl={universityoftoledo}
             title={"Academic Industry Immersion Seminar"}

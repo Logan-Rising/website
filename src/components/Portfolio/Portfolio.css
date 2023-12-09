@@ -1,0 +1,34 @@
+.portfolio-image-with-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1280px;
+    margin: 40px auto;
+  }
+  
+  .portfolio-text-container {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .portfolio-text-style {
+    font-weight: bold;
+  }
+
+  .portfolio-sub-text-style {
+    font-weight: bold;
+  }
+  
+  .portfolio-image-container {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .portfolio-image {
+    max-height: 90%;
+    max-width: 90%;
+  }

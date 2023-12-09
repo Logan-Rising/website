@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import Card from "../Card/Card";
 import { Slide } from "react-awesome-reveal";
 import {useEffect, useState} from 'react';
@@ -70,7 +69,7 @@ const fetchData = async () => {
             }}
           />
         </Slide>
-        <Slide direction="up">
+        <Slide direction="right">
           <Card
             imageUrl = {DiscordBotDashboardLogo}
             backgroundColor={'#800000'}
@@ -82,7 +81,7 @@ const fetchData = async () => {
             }}
           />
         </Slide>
-        <Slide direction="right">
+        <Slide direction="left">
           <Card
             imageUrl = {WebsiteLogo}
             backgroundColor={'#800000'}

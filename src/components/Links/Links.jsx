@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import Card from "../Card/Card";
 import { Slide } from "react-awesome-reveal";
 import githubLogo from "../../assets/github.png";

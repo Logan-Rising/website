@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import FlippableCard from "../FlippableCard/FlippableCard";
 import { Slide } from "react-awesome-reveal";
 
@@ -24,7 +23,7 @@ const Education = () => {
             backText={
               `GPA: 3.409                                                             
 
-              • Related coursework: 
+              Related Coursework:
               • Object Oriented Programming
               • Professional Development
               • Linear Structures
@@ -56,9 +55,25 @@ const Education = () => {
             backText={
               `GPA: 3.739
               
+              Related Coursework:
+              • Introduction to Logic
+              • Linear Algebra
+              • Discrete Mathematics
               • Calculus I, II, III
+              • Differential Equations
               • Physics I, II
               • Engineering Statistics
+
+              Other:
+              Chemistry I
+              Macroeconomics
+              College Composition I, II
+              Introduction to Psychology
+              Human Growth and Development
+              Introduction to World Religion
+              Introduction to Meditation
+              Geography of United States/Canada
+              Film Appreciation
               `
             }
             backgroundImage={'linear-gradient(190deg, #FFA500 0%, #FFFF00 100%)'}
